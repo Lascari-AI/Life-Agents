@@ -1,8 +1,12 @@
 # Tax Prep Agent
 
-Walks you through preparing your self-employment tax documents for a CPA. You drop in your bank statements and receipts, then the agent interviews you, extracts every transaction, and produces a CPA-ready spreadsheet.
+Organize your self-employment finances for tax season.
 
-This is document preparation, not tax filing. The CPA does the rest.
+Drop in your bank statements, receipts, invoices — any financial documents you have.
+
+The agent interviews you, extracts every transaction, categorizes expenses, and produces a clear, organized spreadsheet.
+
+Whether you're handing everything off to a CPA or filing on your own, it pulls it all together in one place — income, expenses, deductions, and estimated payments — so you can see the full picture before you do anything with it.
 
 ## What You Get
 
@@ -19,7 +23,7 @@ An 8-tab xlsx spreadsheet covering:
 | Health Insurance | Provider, premium, coverage dates |
 | Retirement | Account type, amount, date |
 
-Plus a markdown summary document with everything your CPA needs at a glance.
+Plus a markdown summary document with everything organized at a glance — ready to send to a CPA or use as your own reference when filing.
 
 ## Prerequisites
 
@@ -139,7 +143,13 @@ The agent uses 9 standard categories for business expenses:
 
 ## Limitations
 
-- **Not tax advice** — This prepares documents; your CPA does the rest
+- **Not tax advice** — This organizes your documents; a CPA or your own review takes it from there
 - **Designed for sole props / LLCs** — Single-member LLC, sole proprietorship, freelancers
 - **US-focused** — Federal + state estimated taxes, Schedule C categories
 - **PDF quality matters** — Scanned/low-quality PDFs may produce partial extractions
+
+## Disclaimer
+
+**This tool is not tax advice, financial advice, or legal advice.** It is a document preparation assistant only. Lascari AI and its contributors make no guarantees about the accuracy, completeness, or correctness of any output. Transactions may be miscategorized, amounts may be misread from PDFs, and deductions may be missed or incorrectly flagged.
+
+You are solely responsible for reviewing all output before sending it to your CPA or filing anything with the IRS. Lascari AI assumes no responsibility or liability for any errors, omissions, penalties, or damages arising from the use of this tool. Use it entirely at your own risk and always have a qualified tax professional review your documents.
