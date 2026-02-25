@@ -13,7 +13,7 @@ Inventory all documents in the tax year folder, then spawn parallel subagents to
 - Skill: `.claude/skills/cpa-tax-prep/SKILL.md`
 - Output templates: `.claude/skills/cpa-tax-prep/references/output-templates.md`
 - Extraction schema: `.claude/skills/cpa-tax-prep/references/extraction-schema.md`
-- Subagent prompt: `.claude/skills/cpa-tax-prep/references/extract-subagent-prompt.md`
+- Type-specific instructions: `.claude/skills/cpa-tax-prep/references/extract-type-instructions.md`
 - Checklist: `.claude/skills/cpa-tax-prep/references/cpa-checklist.md`
 
 ## Variables
@@ -108,25 +108,29 @@ Report the manifest to the user:
 
 ### Step 5: Spawn Subagents
 
-1. Read the subagent prompt template from `.claude/skills/cpa-tax-prep/references/extract-subagent-prompt.md`
-2. Read the extraction schema from `.claude/skills/cpa-tax-prep/references/extraction-schema.md`
-3. For each file in the manifest that is NOT skipped, build a subagent prompt by filling in the template placeholders:
-   - `{SOURCE_FILE}` — the source PDF path
-   - `{DOCUMENT_TYPE}` — from the manifest
-   - `{OUTPUT_PATH}` — from the manifest
-   - `{PERIOD}` — the month/quarter/year
-   - `{INTAKE_ACCOUNTS_SECTION}` — from Step 1
-   - `{INTAKE_SPECIAL_CONSIDERATIONS}` — from Step 1
-   - `{TYPE_SPECIFIC_INSTRUCTIONS}` — the matching block from the template
-   - `{SCHEMA}` — the matching schema example from extraction-schema.md
+1. Read the extraction schema from `.claude/skills/cpa-tax-prep/references/extraction-schema.md`
+2. Read the type-specific instructions from `.claude/skills/cpa-tax-prep/references/extract-type-instructions.md`
+3. For each file in the manifest that is NOT skipped, build a **dynamic prompt** containing only the task-specific context:
+   - Source file path, document type, output path, period
+   - Account context and special considerations from Step 1
+   - The matching type-specific instruction block (selected from extract-type-instructions.md by document type)
+   - The matching schema section (selected from extraction-schema.md by document type)
 
 4. **Spawn all subagents in parallel** using the Task tool:
-   - Use `subagent_type: "general-purpose"` for each
+   - Use `subagent_type: "tax-extract"` for each
    - Each subagent gets a description like `"Extract {document_type} {period}"`
    - Each subagent reads ONE PDF (or a small group for quarterly estimates) and writes ONE output file
-   - Use `model: "sonnet"` for each subagent to balance speed and cost
 
 5. Wait for all subagents to complete.
+
+Example Task call pattern (repeat for each file):
+```
+Task(
+  description: "Extract business-statement 2025-01",
+  subagent_type: "tax-extract",
+  prompt: <dynamic context only — source file, type instructions, schema, intake context>
+)
+```
 
 **Important**: Launch all Task calls in a single message to maximize parallelism. Each subagent operates independently — they don't need each other's results.
 

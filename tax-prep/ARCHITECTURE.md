@@ -89,26 +89,27 @@
 
   /cpa-tax-prep:extract 2025
 
-  One subagent per source document, all running in parallel.
-  Each subagent reads intake.md for context — so extractions are
-  tailored to your specific accounts, categories, and situation.
+  One `tax-extract` subagent per source document, all running in parallel.
+  Each subagent gets intake context and type-specific instructions —
+  extractions are tailored to your accounts, categories, and situation.
 
   ┌────────────────────────────────────────────────────────────────────┐
   │                      EXTRACTION ORCHESTRATOR                       │
   │                                                                    │
   │  Reads intake.md ──▶ Builds extraction manifest                    │
+  │  Reads extract-type-instructions.md + extraction-schema.md         │
   │                      (maps each source file to an output file)     │
   │                                                                    │
-  │  Spawns subagents in parallel:                                     │
+  │  Spawns tax-extract subagents in parallel:                         │
   │                                                                    │
   │  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐                │
-  │  │  Subagent 1  │ │  Subagent 2  │ │  Subagent 3  │  ...           │
+  │  │ tax-extract  │ │ tax-extract  │ │ tax-extract  │  ...           │
   │  │              │ │              │ │              │                │
   │  │ Business     │ │ Business     │ │ Personal     │                │
   │  │ Jan 2025.pdf │ │ Feb 2025.pdf │ │ Jan 2025.pdf │                │
   │  │              │ │              │ │              │                │
   │  │  ┌─────────┐ │ │  ┌─────────┐ │ │  ┌─────────┐ │                │
-  │  │  │PDF Skill│ │ │  │PDF Skill│ │ │  │PDF Skill│ │                │
+  │  │  │PDF Read │ │ │  │PDF Read │ │ │  │PDF Read │ │                │
   │  │  └─────────┘ │ │  └─────────┘ │ │  └─────────┘ │                │
   │  └──────┬───────┘ └──────┬───────┘ └──────┬───────┘                │
   │         │                │                │                        │
@@ -178,24 +179,25 @@
 
   /cpa-tax-prep:package 2025
 
-  One subagent per section, all running in parallel.
+  One `tax-package` subagent per section, all running in parallel.
   Each converts a finalized markdown file into a JSON section.
   Then a deterministic pipeline merges, builds, and validates.
 
   ┌───────────────────────────────────────────────────────────────────┐
   │                     PACKAGE ORCHESTRATOR                          │
   │                                                                   │
-  │  Spawns section subagents in parallel:                            │
+  │  Reads package-type-instructions.md + tax-data-schema.md          │
+  │  Spawns tax-package subagents in parallel:                        │
   │                                                                   │
   │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐              │
+  │  │tax-pack  │ │tax-pack  │ │tax-pack  │ │tax-pack  │              │
   │  │ Income   │ │ Business │ │ Personal │ │Home Off. │              │
-  │  │ Agent    │ │ Expenses │ │ Deduct.  │ │ Agent    │              │
-  │  │          │ │ Agent    │ │ Agent    │ │          │              │
+  │  │          │ │ Expenses │ │ Deduct.  │ │          │              │
   │  └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘              │
   │  ┌────┴─────┐ ┌────┴─────┐                                        │
-  │  │Estimated │ │Health Ins│                                        │
-  │  │Taxes Agt │ │+ Retire  │                                        │
-  │  │          │ │ Agent    │                                        │
+  │  │tax-pack  │ │tax-pack  │                                        │
+  │  │Est. Tax  │ │Health Ins│                                        │
+  │  │+ Retire  │ │          │                                        │
   │  └────┬─────┘ └────┬─────┘                                        │
   │       │            │                                              │
   │       ▼            ▼                                              │
@@ -255,7 +257,7 @@
 
   source-documents/*.pdf
        │
-       ▼  (extract subagents, parallel)
+       ▼  (tax-extract subagents, parallel)
   extractions/*.md           ← per-file, with YAML status
        │
        ▼  (aggregation)
@@ -264,7 +266,7 @@
        ▼  (human review)
   final/*.md                 ← confirmed and corrected
        │
-       ▼  (package subagents, parallel)
+       ▼  (tax-package subagents, parallel)
   output/sections/*.json     ← per-section structured data
        │
        ▼  (merge_sections.py)
@@ -279,8 +281,9 @@
   KEY PATTERNS
 ═══════════════════════════════════════════════════════════════════════════════
 
-  Parallelism       Subagents run concurrently in Extract and Package.
-                    Each gets its own context window and intake context.
+  Parallelism       Named subagents (tax-extract, tax-package) run
+                    concurrently in Extract and Package phases. Each
+                    gets its own context window and intake context.
 
   Resume Support    STATUS markers on intake sections, YAML status on
                     extractions. Every command picks up where it left off.
@@ -294,4 +297,10 @@
 
   No Mutation       Source documents are read-only. Data flows forward
                     through extractions → raw → final → JSON → xlsx.
+
+  Extensibility     New document types and packaging sections can be added
+                    via `/cpa-tax-prep:add-vertical`. The command interviews
+                    for extraction fields, JSON schema, and spreadsheet
+                    layout, then edits all ~15 touchpoint files (schemas,
+                    instructions, Python scripts, commands, docs) in one pass.
 ```

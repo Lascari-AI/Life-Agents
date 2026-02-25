@@ -34,6 +34,7 @@ This is document preparation, not tax filing.
 | `/cpa-tax-prep:extract [year]` | 2. Extract | Inventories documents, reads bank statement PDFs, extracts and categorizes all transactions. Saves raw working files. |
 | `/cpa-tax-prep:review [year]` | 3. Review | Walks through extracted data section by section for confirmation. Resolves flagged items. Finalizes working files. |
 | `/cpa-tax-prep:package [year]` | 4. Package | Generates the xlsx spreadsheet (8 tabs) and CPA summary markdown. |
+| `/cpa-tax-prep:add-vertical [name]` | Utility | Adds a new document type and/or packaging section (spreadsheet tab) to the system. Interactive interview, then edits all touchpoint files. |
 
 ## File Structure
 

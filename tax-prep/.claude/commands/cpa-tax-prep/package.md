@@ -12,7 +12,7 @@ Produce the final CPA-ready deliverables: an xlsx spreadsheet with tabs for each
 
 - Output templates: `.claude/skills/cpa-tax-prep/references/output-templates.md`
 - JSON schema: `.claude/skills/cpa-tax-prep/references/tax-data-schema.md`
-- Subagent prompt template: `.claude/skills/cpa-tax-prep/references/package-subagent-prompt.md`
+- Type-specific instructions: `.claude/skills/cpa-tax-prep/references/package-type-instructions.md`
 - Merge script: `.claude/skills/cpa-tax-prep/scripts/merge_sections.py`
 - Build script: `.claude/skills/cpa-tax-prep/scripts/build_xlsx.py`
 - Validation script: `.claude/skills/cpa-tax-prep/scripts/validate_xlsx.py`
@@ -41,7 +41,7 @@ SECTIONS_DIR = {OUTPUT_DIR}/sections
 1. Read `{INTAKE}` for filer info
 2. List all finalized files from `{FINAL_DIR}/` — note their exact filenames
 3. Read `.claude/skills/cpa-tax-prep/references/tax-data-schema.md` for the exact JSON schema
-4. Read `.claude/skills/cpa-tax-prep/references/package-subagent-prompt.md` for the subagent prompt template
+4. Read `.claude/skills/cpa-tax-prep/references/package-type-instructions.md` for the type-specific instruction blocks
 
 ### Step 2: Build Section Manifest
 
@@ -66,27 +66,25 @@ mkdir -p "{SECTIONS_DIR}"
 
 ### Step 3: Spawn Parallel Subagents
 
-For each subagent in the manifest, build a prompt from the template by filling in:
-- `{SECTION_NAME}` — the section key (e.g., `income`)
-- `{PRIMARY_SOURCE_FILE}` — the absolute path to the source file(s)
-- `{OUTPUT_PATH}` — the absolute path to the output JSON file
-- `{YEAR}` — the tax year
-- `{INTAKE_CONTEXT}` — the filer info section from intake.md (for home_office, include full intake; for others, just filer basics)
-- `{SECTION_SCHEMA}` — the relevant section from tax-data-schema.md (copy the exact schema for this section)
-- `{TYPE_SPECIFIC_INSTRUCTIONS}` — the matching type-specific block from the template
+For each subagent in the manifest, build a **dynamic prompt** containing only the task-specific context:
+- Section name (e.g., `income`)
+- Source file path(s) (absolute paths)
+- Output file path (absolute path)
+- Tax year
+- Intake context (for home_office, include full intake; for others, just filer basics)
+- The matching section schema (selected from tax-data-schema.md)
+- The matching type-specific instruction block (selected from package-type-instructions.md by section name)
 
-**Spawn all 6 subagents in parallel** using the Task tool with `subagent_type: "general-purpose"` and `model: "sonnet"`. Each subagent gets:
-- `allowed-tools: Read, Write, Glob` in its prompt
-- The filled-in prompt template
+**Spawn all 6 subagents in parallel** using the Task tool with `subagent_type: "tax-package"`. Each subagent gets:
+- The dynamic prompt with all task-specific context
 - A description like "Package {section_name} section"
 
 Example Task call pattern (repeat for each subagent):
 ```
 Task(
   description: "Package income section",
-  subagent_type: "general-purpose",
-  model: "sonnet",
-  prompt: <filled template>
+  subagent_type: "tax-package",
+  prompt: <dynamic context only — source file, section schema, type instructions, intake context>
 )
 ```
 
