@@ -1,12 +1,12 @@
 # Tax Prep Agent
 
-Organize your self-employment finances for tax season.
+Designed for freelancers, sole proprietors, and small LLC owners.
 
-Drop in your bank statements, receipts, invoices — any financial documents you have.
+The primary goal is to produce a clean, organized document you can hand directly to your CPA — everything they need to file your taxes, classified and in one place. 
 
-The agent interviews you, extracts every transaction, categorizes expenses, and produces a clear, organized spreadsheet.
+You can also use it for your own reference, but it's built around giving your accountant a single package they can work from alongside any other documents you send them. 
 
-Whether you're handing everything off to a CPA or filing on your own, it pulls it all together in one place — income, expenses, deductions, and estimated payments — so you can see the full picture before you do anything with it.
+The goal is to reduce back-and-forth between you and your tax advisor, make their job as easy as possible, and help you get the best return you can.
 
 ## What You Get
 
