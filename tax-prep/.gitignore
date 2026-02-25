@@ -1,0 +1,12 @@
+# Tax year data folders (contain personal financial data)
+*Taxes/
+
+# Source documents
+*.pdf
+
+# Generated outputs
+*.xlsx
+*.json
+
+# OS files
+.DS_Store
