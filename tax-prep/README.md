@@ -47,6 +47,23 @@ Then run:
 /cpa-tax-prep:initialize 2025
 ```
 
+> [!NOTE]
+> **Heads up — this takes a while.**
+>
+> The extract phase reads every page of every bank statement PDF, which can take 30+ minutes depending on how many documents you have.
+>
+> I personally run it with the `--dangerously-skip-permissions` flag so it can churn through everything in the background without stopping for approval on each file operation:
+>
+> ```bash
+> claude --dangerously-skip-permissions
+> ```
+>
+> This flag bypasses all permission prompts — file reads, writes, shell commands, everything.
+>
+> **Use at your own risk.** 
+> 
+> Only run it if you understand what that means and are comfortable with Claude Code operating unsupervised in your directory.
+
 ## The Workflow
 
 Five commands, run in order:
