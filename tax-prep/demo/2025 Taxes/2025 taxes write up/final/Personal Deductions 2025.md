@@ -139,21 +139,27 @@ Note: Also tracked separately in the Health Insurance 2025 file. Deductible as s
 
 | Item | Amount | Reason |
 |------|--------|--------|
-| Headspace ($49.99/mo x 12) | $599.88 | Personal expense — not business-related |
+| Headspace ($49.99/mo x 12) | $599.88 | Personal wellness app — not business-related. Reviewed and excluded. |
 
 ---
 
 ## Total Summary
 
-| Deduction Type | Location | Period | Annual Total |
-|---------------|----------|--------|-------------|
-| Rent | Denver | Jan–Aug | $22,400.00 |
-| Rent | Portland | Sep–Dec | $12,400.00 |
-| Internet | Denver (Xfinity) | Jan–Aug | $712.00 |
-| Internet | Portland (Ziply Fiber) | Sep–Dec | $316.00 |
-| Utilities | Denver (Xcel Energy) | Jan–Aug | $958.00 |
-| Utilities | Portland (PGE) | Sep–Dec | $403.00 |
-| Health Insurance | BCBS | Jan–Dec | $5,820.00 |
-| **Grand Total** | | | **$43,009.00** |
+| Type | Annual Total |
+|------|-------------|
+| Rent (Denver, 8 mo) | $22,400.00 |
+| Rent (Portland, 4 mo) | $12,400.00 |
+| Internet (Denver/Xfinity, 8 mo) | $712.00 |
+| Internet (Portland/Ziply, 4 mo) | $316.00 |
+| Utilities (Denver/Xcel, 8 mo) | $958.00 |
+| Utilities (Portland/PGE, 4 mo) | $403.00 |
+| Health Insurance (BCBS, 12 mo) | $5,820.00 |
+| **TOTAL** | **$43,009.00** |
 
-Note: Rent, internet, and utilities may qualify for partial home office deduction if home office is claimed. Headspace ($599.88) excluded as personal expense.
+---
+
+## Notes
+
+- Rent, internet, and utilities may qualify for partial home office deduction if home office is claimed.
+- Headspace ($599.88/year) reviewed and excluded — personal wellness, not business-related.
+- Provider transferred from BCBS Colorado to BCBS Oregon effective September 2025 due to mid-year relocation.

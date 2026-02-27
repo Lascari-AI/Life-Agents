@@ -47,6 +47,8 @@ Phase 3 (Review) — Final / Reviewed
 
 ## Notes
 
-- Coverage transferred from Colorado to Oregon in September 2025 due to mid-year relocation (Denver → Portland).
-- Premium amount remained unchanged at $485.00/mo through the transfer.
+- Coverage transferred from BCBS of Colorado to BCBS of Oregon effective September 2025 due to mid-year relocation (Denver to Portland).
+- Premium amount remained unchanged at $485.00/mo through the transfer (same plan, portability transfer).
 - All 12 months confirmed paid via personal checking ACH — no missed or late payments.
+- Jan–Aug statements show "BCBS CO" ACH withdrawal around the 15th.
+- Sep–Dec statements show "BCBS OR" ACH withdrawal around the 15th.
