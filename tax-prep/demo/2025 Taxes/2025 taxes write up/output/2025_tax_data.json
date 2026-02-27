@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "year": 2025,
+    "generated_at": "2026-02-15T10:30:00",
+    "source_files": [
+      "final/Income 2025.md",
+      "final/Expenses Rivera Digital Consulting 2025.md",
+      "final/Personal Deductions 2025.md",
+      "final/Estimated Taxes 2025.md",
+      "final/Health Insurance 2025.md"
+    ]
+  },
+  "summary": {
+    "filer": {
+      "name": "Alex Rivera",
+      "business": "Rivera Digital Consulting LLC",
+      "entity": "Single-member LLC",
+      "states": "Colorado (Jan–Aug), Oregon (Sep–Dec)",
+      "filing_status": "Single, no dependents",
+      "address": "1585 Hawthorne Blvd, Unit 7, Portland, OR 97214",
+      "address_change": "Moved September 1, 2025 from 742 Maple Street, Apt 3B, Denver, CO 80202",
+      "phone": "303-555-0147",
+      "email": "alex@riveradigital.co"
+    },
+    "cpa_questions": [
+      "ASK CPA: Verify total GreenLeaf income. Bank deposits show $36,500 but 1099-NEC on file shows $28,000. May receive corrected 1099.",
+      "ASK CPA: Should moving expenses from Denver to Portland be deductible? Moved for personal reasons, not employer-required.",
+      "ASK CPA: Colorado part-year resident return needed in addition to Oregon?",
+      "ASK CPA: STK Steakhouse Miami ($312.00) — client dinner, 4 attendees. Subject to 50% meals deduction limitation.",
+      "ASK CPA: Recommend account type (SEP-IRA, Solo 401k) and contribution limits based on $157,300 income. Currently only have Roth IRA ($7,000)."
+    ],
+    "cpa_notes": [
+      "NOTE: Q4 estimated tax ($6,300) paid January 15, 2026 — applies to 2025 tax year.",
+      "NOTE: Claude.ai subscription increased from $20/mo to $100/mo in March 2025 (Pro plan upgrade).",
+      "NOTE: AWS charges vary monthly ($47–$83 range) based on usage.",
+      "NOTE: WeWork coworking ($270/mo × 2 months) was temporary while Portland home office was being set up after move.",
+      "NOTE: U-Haul charge ($89) on business card excluded — personal moving expense.",
+      "NOTE: Headspace subscription ($49.99/mo × 12 = $599.88) on personal account excluded — personal wellness.",
+      "NOTE: Roth IRA contribution ($7,000) is after-tax and not deductible, but included for CPA records.",
+      "NOTE: Mid-year move from Denver to Portland affects home office calculation, utility providers, and state tax obligations."
+    ]
+  },
+  "income": {
+    "monthly": [
+      {"month": "January", "amount": 10300.00, "sources": "Gusto/TechStart ($9,500), Stripe ($800)"},
+      {"month": "February", "amount": 18000.00, "sources": "Gusto/TechStart ($9,500), GreenLeaf ACH ($8,500)"},
+      {"month": "March", "amount": 10700.00, "sources": "Gusto/TechStart ($9,500), Stripe ($1,200)"},
+      {"month": "April", "amount": 11000.00, "sources": "Gusto/TechStart ($9,500), Stripe ($1,500)"},
+      {"month": "May", "amount": 21500.00, "sources": "Gusto/TechStart ($9,500), GreenLeaf ACH ($12,000)"},
+      {"month": "June", "amount": 18500.00, "sources": "Gusto/TechStart ($9,500), GreenLeaf ACH ($7,500), Stripe ($1,500)"},
+      {"month": "July", "amount": 9500.00, "sources": "Gusto/TechStart ($9,500)"},
+      {"month": "August", "amount": 10300.00, "sources": "Gusto/TechStart ($9,500), Stripe ($800)"},
+      {"month": "September", "amount": 9500.00, "sources": "Gusto/TechStart ($9,500)"},
+      {"month": "October", "amount": 18000.00, "sources": "Gusto/TechStart ($9,500), GreenLeaf ACH ($8,500)"},
+      {"month": "November", "amount": 10500.00, "sources": "Gusto/TechStart ($9,500), Stripe ($1,000)"},
+      {"month": "December", "amount": 9500.00, "sources": "Gusto/TechStart ($9,500)"}
+    ],
+    "by_source": [
+      {"source": "TechStart Inc. (Gusto payroll)", "annual_total": 114000.00},
+      {"source": "GreenLeaf Co. (ACH payments)", "annual_total": 36500.00},
+      {"source": "Stripe payouts (various clients)", "annual_total": 6800.00}
+    ],
+    "interest": [
+      {"source": "Marcus by Goldman Sachs (1099-INT)", "amount": 847.23}
+    ]
+  },
+  "business_expenses": {
+    "recurring": [
+      {"vendor": "Claude.ai (Anthropic)", "monthly_amount": "$20→$100 (varied)", "months_charged": "1/3, 2/3, 3/3, 4/3, 5/3, 6/3, 7/1, 8/1, 9/2, 10/1, 11/3, 12/1", "annual_total": 1040.00, "category": "Software & Subscriptions"},
+      {"vendor": "GitHub", "monthly_amount": 4.00, "months_charged": "1/3–12/1 (12 months)", "annual_total": 48.00, "category": "Software & Subscriptions"},
+      {"vendor": "Vercel Pro", "monthly_amount": 20.00, "months_charged": "1/3–12/1 (12 months)", "annual_total": 240.00, "category": "Software & Subscriptions"},
+      {"vendor": "Figma", "monthly_amount": 15.00, "months_charged": "1/5–12/3 (12 months)", "annual_total": 180.00, "category": "Software & Subscriptions"},
+      {"vendor": "AWS", "monthly_amount": "$47–$83 (varied)", "months_charged": "1/7–12/5 (12 months)", "annual_total": 746.62, "category": "Software & Subscriptions"},
+      {"vendor": "Google Workspace", "monthly_amount": 14.40, "months_charged": "1/8–12/8 (12 months)", "annual_total": 172.80, "category": "Software & Subscriptions"},
+      {"vendor": "Notion", "monthly_amount": 10.00, "months_charged": "1/8–12/8 (12 months)", "annual_total": 120.00, "category": "Software & Subscriptions"},
+      {"vendor": "Linear", "monthly_amount": 8.00, "months_charged": "1/10–12/9 (12 months)", "annual_total": 96.00, "category": "Software & Subscriptions"},
+      {"vendor": "Slack Pro", "monthly_amount": 8.75, "months_charged": "1/10–12/9 (12 months)", "annual_total": 105.00, "category": "Software & Subscriptions"},
+      {"vendor": "1Password Business", "monthly_amount": 7.99, "months_charged": "1/12–12/11 (12 months)", "annual_total": 95.88, "category": "Software & Subscriptions"},
+      {"vendor": "O'Reilly Media (Safari Books)", "monthly_amount": 39.99, "months_charged": "3/15–12/15 (10 months)", "annual_total": 399.90, "category": "Education & Courses"},
+      {"vendor": "Tailwind UI", "monthly_amount": 14.00, "months_charged": "1/15, 4/15, 7/15, 10/15 (quarterly)", "annual_total": 56.00, "category": "Software & Subscriptions"}
+    ],
+    "one_time": [
+      {"date": "1/9", "vendor": "Apple Store", "amount": 2499.00, "category": "Hardware & Technology", "description": "MacBook Pro 16\" M4 — 100% business use"},
+      {"date": "1/22", "vendor": "Amazon", "amount": 89.99, "category": "Hardware & Technology", "description": "USB-C cables and adapters"},
+      {"date": "2/10", "vendor": "TaxPro Services LLC", "amount": 2400.00, "category": "Professional Services", "description": "CPA fees for 2024 tax preparation"},
+      {"date": "2/14", "vendor": "Best Buy", "amount": 1247.83, "category": "Hardware & Technology", "description": "4K monitor + USB-C dock for home office"},
+      {"date": "3/11", "vendor": "Namecheap", "amount": 299.99, "category": "Software & Subscriptions", "description": "Domain renewals — riveradigital.co + 2 client project domains"},
+      {"date": "3/19", "vendor": "Udemy", "amount": 49.99, "category": "Education & Courses", "description": "Next.js course"},
+      {"date": "4/8", "vendor": "J. Martinez (Venmo)", "amount": 89.00, "category": "Meals & Entertainment", "description": "Business lunch, 2 attendees, partnership discussion"},
+      {"date": "5/6", "vendor": "ReactConf 2025", "amount": 799.00, "category": "Education & Courses", "description": "Conference ticket"},
+      {"date": "5/20", "vendor": "Amazon", "amount": 445.00, "category": "Office Supplies & Equipment", "description": "Standing desk"},
+      {"date": "6/5", "vendor": "Southwest Airlines", "amount": 487.50, "category": "Travel", "description": "Flight Denver→Miami for GreenLeaf client meeting"},
+      {"date": "6/18", "vendor": "Marriott Miami Beach", "amount": 624.00, "category": "Travel", "description": "Hotel — 2 nights for GreenLeaf client trip"},
+      {"date": "6/19", "vendor": "STK Steakhouse", "amount": 312.00, "category": "Meals & Entertainment", "description": "Client dinner with GreenLeaf team, 4 attendees"},
+      {"date": "6/19", "vendor": "Uber", "amount": 65.00, "category": "Travel", "description": "Uber to Denver International Airport for Miami trip"},
+      {"date": "6/20", "vendor": "Uber", "amount": 42.00, "category": "Travel", "description": "Uber ride in Miami during client trip"},
+      {"date": "7/10", "vendor": "Amazon", "amount": 129.99, "category": "Hardware & Technology", "description": "Mechanical keyboard"},
+      {"date": "7/18", "vendor": "Domain.com", "amount": 14.99, "category": "Software & Subscriptions", "description": "Client project domain registration"},
+      {"date": "8/8", "vendor": "Creative Market", "amount": 175.00, "category": "Software & Subscriptions", "description": "Design templates and assets for client projects"},
+      {"date": "9/18", "vendor": "City of Portland", "amount": 100.00, "category": "Business Filing & Legal", "description": "Portland business license"},
+      {"date": "9/22", "vendor": "Oregon Secretary of State", "amount": 100.00, "category": "Business Filing & Legal", "description": "LLC registration in Oregon"},
+      {"date": "10/2", "vendor": "WeWork Portland", "amount": 270.00, "category": "Office Supplies & Equipment", "description": "Coworking hot desk — temporary while home office set up"},
+      {"date": "10/17", "vendor": "Amazon", "amount": 79.99, "category": "Hardware & Technology", "description": "Webcam for video calls"},
+      {"date": "11/3", "vendor": "WeWork Portland", "amount": 270.00, "category": "Office Supplies & Equipment", "description": "Coworking hot desk — second month"},
+      {"date": "11/15", "vendor": "Amazon", "amount": 34.99, "category": "Office Supplies & Equipment", "description": "Desk lamp"},
+      {"date": "12/4", "vendor": "Northwest Registered Agent", "amount": 125.00, "category": "Business Filing & Legal", "description": "Annual registered agent fee"},
+      {"date": "12/18", "vendor": "Amazon", "amount": 64.99, "category": "Hardware & Technology", "description": "Backup SSD drive"}
+    ],
+    "excluded": [
+      {"date": "4/15", "payee": "IRS (USATAXPYMT)", "amount": 4200.00, "notes": "Q1 federal estimated tax — tracked in Estimated Taxes"},
+      {"date": "4/15", "payee": "CO DOR", "amount": 1800.00, "notes": "Q1 Colorado state estimated tax"},
+      {"date": "6/16", "payee": "IRS (USATAXPYMT)", "amount": 4200.00, "notes": "Q2 federal estimated tax"},
+      {"date": "6/16", "payee": "CO DOR", "amount": 1800.00, "notes": "Q2 Colorado state estimated tax"},
+      {"date": "8/22", "payee": "U-Haul", "amount": 89.00, "notes": "Personal moving expense — excluded from business deductions"},
+      {"date": "9/15", "payee": "IRS (USATAXPYMT)", "amount": 4200.00, "notes": "Q3 federal estimated tax"},
+      {"date": "9/15", "payee": "OR DOR", "amount": 2100.00, "notes": "Q3 Oregon state estimated tax"}
+    ]
+  },
+  "personal_deductions": [
+    {"type": "Rent (Jan–Aug)", "vendor": "Maplewood Properties — 742 Maple St, Denver", "monthly_amount": 2800.00, "annual_total": 22400.00, "payment_method": "Venmo", "notes": "8 months × $2,800"},
+    {"type": "Rent (Sep–Dec)", "vendor": "PDX Living LLC — 1585 Hawthorne Blvd, Portland", "monthly_amount": 3100.00, "annual_total": 12400.00, "payment_method": "Venmo", "notes": "4 months × $3,100"},
+    {"type": "Internet (Jan–Aug)", "vendor": "Xfinity/Comcast", "monthly_amount": 89.00, "annual_total": 712.00, "payment_method": "ACH (personal checking)", "notes": "8 months × $89"},
+    {"type": "Internet (Sep–Dec)", "vendor": "Ziply Fiber", "monthly_amount": 79.00, "annual_total": 316.00, "payment_method": "ACH (personal checking)", "notes": "4 months × $79"},
+    {"type": "Utilities (Jan–Aug)", "vendor": "Xcel Energy", "annual_total": 958.00, "payment_method": "ACH (personal checking)", "notes": "8 months, varied ($98–$142)"},
+    {"type": "Utilities (Sep–Dec)", "vendor": "PGE (Portland General Electric)", "annual_total": 403.00, "payment_method": "ACH (personal checking)", "notes": "4 months, varied ($88–$115)"}
+  ],
+  "home_office": {
+    "locations": [
+      {
+        "description": "742 Maple Street, Apt 3B, Denver, CO 80202",
+        "months": "January — August (8 months)",
+        "months_count": 8,
+        "office_sqft": 120,
+        "home_sqft": 1100,
+        "office_pct": 10.91,
+        "monthly_rent": 2800.00,
+        "monthly_deduction": 305.48,
+        "subtotal": 2443.84
+      },
+      {
+        "description": "1585 Hawthorne Blvd, Unit 7, Portland, OR 97214",
+        "months": "September — December (4 months)",
+        "months_count": 4,
+        "office_sqft": 140,
+        "home_sqft": 1350,
+        "office_pct": 10.37,
+        "monthly_rent": 3100.00,
+        "monthly_deduction": 321.47,
+        "subtotal": 1285.88
+      }
+    ],
+    "notes": [
+      "Denver: 120 sq ft / 1,100 sq ft = 10.91%. Rent $2,800/mo × 10.91% = $305.48/mo × 8 months = $2,443.84",
+      "Portland: 140 sq ft / 1,350 sq ft = 10.37%. Rent $3,100/mo × 10.37% = $321.47/mo × 4 months = $1,285.88",
+      "Total home office deduction: $3,729.72",
+      "NOTE: Internet and utilities are also partially deductible at the office percentage — see Personal Deductions section."
+    ]
+  },
+  "estimated_taxes": {
+    "payments": [
+      {"authority": "IRS", "quarter": "Q1", "date_paid": "April 15, 2025", "amount": 4200.00, "confirmation": "2025-Q1-FED-8847"},
+      {"authority": "Colorado", "quarter": "Q1", "date_paid": "April 15, 2025", "amount": 1800.00, "confirmation": "CO-2025-Q1-4421"},
+      {"authority": "IRS", "quarter": "Q2", "date_paid": "June 16, 2025", "amount": 4200.00, "confirmation": "2025-Q2-FED-9912"},
+      {"authority": "Colorado", "quarter": "Q2", "date_paid": "June 16, 2025", "amount": 1800.00, "confirmation": "CO-2025-Q2-5538"},
+      {"authority": "IRS", "quarter": "Q3", "date_paid": "September 15, 2025", "amount": 4200.00, "confirmation": "2025-Q3-FED-1156"},
+      {"authority": "Oregon", "quarter": "Q3", "date_paid": "September 15, 2025", "amount": 2100.00, "confirmation": "OR-2025-Q3-7723"},
+      {"authority": "IRS", "quarter": "Q4", "date_paid": "January 15, 2026", "amount": 4200.00, "confirmation": "2025-Q4-FED-3304"},
+      {"authority": "Oregon", "quarter": "Q4", "date_paid": "January 15, 2026", "amount": 2100.00, "confirmation": "OR-2025-Q4-8891"}
+    ],
+    "prior_year_payments": [],
+    "notes": [
+      "Q4 estimated tax ($6,300) paid January 15, 2026 — applies to 2025 tax year.",
+      "Switched from Colorado to Oregon for state estimated taxes starting Q3 due to mid-year move September 1, 2025."
+    ]
+  },
+  "health_insurance": [
+    {
+      "provider": "Blue Cross Blue Shield",
+      "monthly_premium": 485.00,
+      "start_month": "January",
+      "end_month": "December",
+      "months": 12,
+      "annual_total": 5820.00,
+      "payment_method": "ACH from personal checking (Wells Fargo)",
+      "notes": [
+        "1095-A provided — policy #RDC-2025-48571",
+        "No APTC received — full premium paid out-of-pocket",
+        "Deductible as self-employed health insurance (Schedule 1, Form 1040)",
+        "Provider transferred from BCBS Colorado to BCBS Oregon effective September 2025"
+      ]
+    }
+  ],
+  "retirement": {
+    "contributions": [
+      {
+        "account_type": "Roth IRA",
+        "institution": "Vanguard",
+        "amount": 7000.00,
+        "date": "March 15, 2025",
+        "tax_year": "2025"
+      }
+    ],
+    "notes": [
+      "Roth IRA contributions are not tax-deductible (made with after-tax dollars) but reported for CPA records.",
+      "ASK CPA: Recommend account type (SEP-IRA, Solo 401k) and contribution limits based on $157,300 income."
+    ]
+  }
+}

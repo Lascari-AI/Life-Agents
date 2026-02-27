@@ -10,3 +10,6 @@
 
 # OS files
 .DS_Store
+
+# Allow demo files (fictional data for YouTube video)
+!demo/**
