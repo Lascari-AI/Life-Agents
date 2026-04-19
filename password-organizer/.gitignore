@@ -1,0 +1,8 @@
+# Session working files (contain sensitive password data)
+*/source-files/
+*/working/
+*/output/
+
+# Python
+__pycache__/
+*.pyc

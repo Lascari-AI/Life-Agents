@@ -14,6 +14,7 @@ Use more compute.
 | Agent | What It Does |
 |-------|-------------|
 | [tax-prep](tax-prep/) | Organize your self-employment finances for tax season |
+| [password-organizer](password-organizer/) | Sort a 1Password export into separate vault-specific CSVs |
 
 ## Prerequisites
 
