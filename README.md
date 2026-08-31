@@ -1,3 +1,5 @@
+
+
 # Life Agents
 
 A collection of agent systems I've built and use in my own life.
@@ -23,7 +25,7 @@ Use more compute.
 ## Getting Started
 
 ```bash
-git clone https://github.com/Lascari-AI/Life-Agents.git
+git clone https://github.com/fjooord/Life-Agents.git
 cd life-agents
 ```
 
